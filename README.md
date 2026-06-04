@@ -27,7 +27,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-link>
+   git clone https://github.com/Sachin7568/Employee-Management-System.git
    cd Employee-Management-System
    ```
 
