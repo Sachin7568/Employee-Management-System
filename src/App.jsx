@@ -67,16 +67,12 @@ const App = () => {
       return b.name.localeCompare(a.name);
     });
 
-
   return (
     <div className='min-h-screen bg-gray-100 p-8'>
       <div className='max-w-4xl mx-auto'>        
         <header className='mb-8 flex justify-between items-center'>
           <h1 className='text-4xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-600 tracking-tight'>Employee Management System</h1>
-          <button onClick={() => {
-            setEmployeeToEdit(null);
-            setIsFormOpen(true);
-          }} className='px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition'>Add Employee</button>
+          <button onClick={() => { setEmployeeToEdit(null); setIsFormOpen(true); }} className='px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition'>Add Employee</button>
         </header>
 
       <main>

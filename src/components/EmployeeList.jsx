@@ -3,7 +3,7 @@ import EmployeeCard from './EmployeeCard'
 
 // This component shows the list of employees or a message if the list is empty
 const EmployeeList = ({ employees, onDelete, onEdit }) => {
-    if(employees.length ===0) {
+    if(employees.length === 0) {
         return (
             <div className='text-center my-16 bg-white p-8 rounded-xl shadow-sm border border-gray-100'>
                 <div className="text-6xl mb-4">🔍</div>
@@ -15,14 +15,7 @@ const EmployeeList = ({ employees, onDelete, onEdit }) => {
 
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            {employees.map((emp) => (
-                <EmployeeCard
-                key={emp.id}
-                employee={emp}
-                onDelete={onDelete}
-                onEdit={onEdit}
-                />
-            ))}
+            {employees.map((emp) => (<EmployeeCard key={emp.id} employee={emp} onDelete={onDelete} onEdit={onEdit} />))}
         </div>
     );
 };
