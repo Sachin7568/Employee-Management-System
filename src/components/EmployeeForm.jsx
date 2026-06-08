@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-// we use this same form for both adding a new employee and editing an existing one
 const EmployeeForm = ({ onSubmit, onCancel, initialData}) => {
 
     // keep track of what the user is typing in the inputs
@@ -13,20 +12,17 @@ const EmployeeForm = ({ onSubmit, onCancel, initialData}) => {
     });
     const [error, setError] = useState("");
 
-    // if we passed in an employee to edit, pre-fill the form with their data
     useEffect(() => {
         if(initialData) {
             setFormData(initialData);
         }
     },[initialData]);
 
-    // update the specific field in our state when the user types
     const handleChange = (e) => {
         const {name, value} = e.target;
         setFormData({ ...formData, [name]: value});
     };
 
-    // check if name and email are filled out before submitting
     const handleSubmit = (e) => {
         e.preventDefault();
 

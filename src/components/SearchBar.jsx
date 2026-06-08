@@ -1,6 +1,5 @@
 import React from 'react'
 
-// A simple search box that updates the search state in the parent component
 const SearchBar = ( { searchQuery, setSearchQuery}) => {
   return (
     <div className='mb-6'>

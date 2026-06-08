@@ -1,7 +1,6 @@
 import React from 'react'
 import EmployeeCard from './EmployeeCard'
 
-// This component shows the list of employees or a message if the list is empty
 const EmployeeList = ({ employees, onDelete, onEdit }) => {
     if(employees.length === 0) {
         return (

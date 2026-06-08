@@ -7,7 +7,7 @@ import EmployeeForm from './components/EmployeeForm'
 
 
 const App = () => {
-  // try to load saved employees from local storage first, otherwise use the dummy data
+
   const [employees, setEmployees] = useState(() => {
 
     const savedEmployees = localStorage.getItem("employees");
@@ -19,14 +19,12 @@ const App = () => {
   });
 
 
-  // states for the search bar, sorting, and the popup form
   const [searchQuery, setSearchQuery] = useState('');
   const [sortOrder, setSortOrder] = useState('asc');
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [employeeToEdit, setEmployeeToEdit] = useState(null);
 
 
-  // save to local storage every time the employee list changes so data isn't lost on refresh
   useEffect(() => {
 
     localStorage.setItem(
@@ -36,7 +34,6 @@ const App = () => {
   }, [employees]);
 
 
-  // basic functions to add, update, and delete employees
   
   const addEmployee = (newEmployee) => {
     setEmployees([...employees, { ...newEmployee, id: Date.now()}]);
@@ -53,7 +50,6 @@ const App = () => {
   };
 
 
-  // filter employees based on search query, then sort them A-Z or Z-A
   const filteredEmployees = employees.filter((emp) => {
       const query = searchQuery.toLowerCase();
       return (

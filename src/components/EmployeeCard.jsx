@@ -1,6 +1,5 @@
 import React from 'react' 
 
-// This component shows the info for one employee along with buttons to edit or delete them
 const EmployeeCard = ({ employee, onDelete, onEdit }) => {
   return (
     <div className='bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300'>
